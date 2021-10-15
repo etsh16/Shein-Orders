@@ -1,0 +1,33 @@
+extends layout
+
+block layout-content
+  div.ct-docs-page-title
+    h1#content.ct-docs-page-h1-title
+
+    .avatar-group.mt-3
+
+  div.text-center.row
+    div.col-2.mx-auto.my-auto
+     span  Board Link
+    div.col-8.mx-auto.my-auto
+      input.form-control(type="text")#bord-link
+    div.col-2.mx-auto.my-auto
+      button.btn.btn-primary.mb-0(onclick='loadLink()') submit
+    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
+      h4.text-light.m-0 Total items  
+      h5.text-light.m-0
+        strong#total-items 0
+    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
+      h4.text-light.m-0 Total Price as RS  
+      h5.text-light.m-0
+        strong#total-or-price 0  
+    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
+      h4.text-light.m-0 Total Price as EGP   
+      h5.text-light.m-0
+        strong#total-eg-price 0
+    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
+      h4.text-light.m-0 Over Total Price  
+      h5.text-light.m-0
+        strong#total-over 0  
+    div#result
+  script(src="/js/home.js") 
