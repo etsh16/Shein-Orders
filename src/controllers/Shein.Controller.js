@@ -5,6 +5,11 @@ const loaderController = {};
 loaderController.getItems = async (req, ress, next) => {
   var { link } = req.query;
   const result = [];
+  const regex_group_id = /.*group_id=([^&|\n|\t\s]+)/g;
+  const regex_member_id = /.*member_id=([^&|\n|\t\s]+)/g;
+  const regex_group_id_token = /.*group_id_token=([^&|\n|\t\s]+)/g;
+
+  link=`https://ar.shein.com/user/wishlist/groups/share?group_id_token=${regex.exec(regex_group_id_token)[1]}&group_id=${regex.exec(regex_group_id)[1]}&member_id=${regex.exec(regex_member_id)[1]}`
   try {
     for (let i = 1; i < 100000; i++) {
       link=link.replace(/(&page\=\d*)/g,'');
