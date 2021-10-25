@@ -1,0 +1,903 @@
+// begin::Menu wrapper
+html
+  head
+  body
+    .header-menu.align-items-stretch(data-kt-drawer='true', data-kt-drawer-name='header-menu', data-kt-drawer-activate='{default: true, lg: false}', data-kt-drawer-overlay='true', data-kt-drawer-width='{default:\'200px\', \'300px\': \'250px\'}', data-kt-drawer-direction='end', data-kt-drawer-toggle='#kt_header_menu_mobile_toggle', data-kt-swapper='true', data-kt-swapper-mode='prepend', data-kt-swapper-parent='{default: \'#kt_body\', lg: \'#kt_header_nav\'}')
+      // begin::Menu
+      .menu.menu-lg-rounded.menu-column.menu-lg-row.menu-state-bg.menu-title-gray-700.menu-state-title-primary.menu-state-icon-primary.menu-state-bullet-primary.menu-arrow-gray-400.fw-bold.my-5.my-lg-0.align-items-stretch#kt_header_menu(data-kt-menu='false')
+        .menu-item.here.show.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+          a.menu-link.active.py-3(href='/')
+            span.menu-title Home
+            span.menu-arrow.d-lg-none
+        //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-rounded-0.py-lg-4.w-lg-225px
+        //-     .menu-item
+        //-       a.menu-link.active.py-3(href='?page=index')
+        //-         span.menu-icon
+        //-           i.bi.bi-archive.fs-3
+        //-         span.menu-title Default
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=dashboards/compact')
+        //-         span.menu-icon
+        //-           i.bi.bi-clipboard-data.fs-2
+        //-         span.menu-title Compact
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=dashboards/minimal')
+        //-         span.menu-icon
+        //-           i.bi.bi-tablet.fs-2
+        //-         span.menu-title Minimal
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=landing')
+        //-         span.menu-icon
+        //-           i.bi.bi-app-indicator.fs-3
+        //-         span.menu-title Landing
+        //- .menu-item.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+        //-   span.menu-link.py-3
+        //-     span.menu-title Crafted
+        //-     span.menu-arrow.d-lg-none
+        //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-rounded-0.py-lg-4.w-lg-225px
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-archive.fs-3
+        //-         span.menu-title Pages
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Profile
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/overview')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Overview
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/projects')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Projects
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/campaigns')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Campaigns
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/documents')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Documents
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/connections')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Connections
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/profile/activity')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Activity
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Projects
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title My Projects
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/project')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title View Project
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/targets')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Targets
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/budget')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Budget
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/users')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Users
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/files')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Files
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/activity')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Activity
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/projects/settings')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Settings
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Wizards
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/wizards/horizontal')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Horizontal
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/wizards/vertical')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Vertical
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Search
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/search/horizontal')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Horizontal
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/search/vertical')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Vertical
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Blog
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/blog/home')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Blog Home
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/blog/post')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Blog Post
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Company
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/about')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title About Us
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/pricing')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Pricing
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/contact')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Contact Us
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/team')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Our Team
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/licenses')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Licenses
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/company/sitemap')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sitemap
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Careers
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/careers/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Careers List
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/careers/apply')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Careers Apply
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title FAQ
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/faq/classic')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Classic
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=pages/faq/extended')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Extended
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-person.fs-2
+        //-         span.menu-title Account
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/overview')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Overview
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/settings')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Settings
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/security')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Security
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/billing')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Billing
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/statements')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Statements
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/referrals')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Referrals
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=account/api-keys')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title API Keys
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-sticky.fs-3
+        //-         span.menu-title Authentication
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Basic Flow
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/basic/sign-in')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-in
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/basic/sign-up')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-up
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/basic/two-steps')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Two-steps
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/basic/password-reset')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Reset
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/basic/new-password')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Password
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Aside Flow
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/aside/sign-in')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-in
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/aside/sign-up')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-up
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/aside/two-steps')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Two-steps
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/aside/password-reset')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Reset
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/aside/new-password')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Password
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Dark Flow
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/dark/sign-in')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-in
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/dark/sign-up')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Sign-up
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/dark/two-steps')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Two-steps
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/dark/password-reset')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Reset
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/flows/dark/new-password')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Password
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Extended
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/extended/multi-steps-sign-up')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Multi-steps Sign-up
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/extended/free-trial-sign-up')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Free Trial Sign-up
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/extended/coming-soon')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Coming Soon
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/welcome')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Welcome Message
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/verify-email')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Verify Email
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/password-confirmation')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Confirmation
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/deactivation')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Account Deactivation
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/error-404')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Error 404
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/general/error-500')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Error 500
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Email Templates
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/email/verify-email', target='blank')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Verify Email
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/email/invitation', target='blank')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Account Invitation
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/email/password-reset', target='blank')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Reset
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=authentication/email/password-change', target='blank')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Password Changed
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-shield-check.fs-3
+        //-         span.menu-title Modals
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title General
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/general/invite-friends')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Invite Friends
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/general/view-users')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title View Users
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/general/upgrade-plan')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Upgrade Plan
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/general/share-earn')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Share & Earn
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Forms
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/forms/new-target')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Target
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/forms/new-card')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Card
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/forms/new-address')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title New Address
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/forms/create-api-key')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Create API Key
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Wizards
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/wizards/two-factor-authentication')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Two Factor Auth
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/wizards/create-app')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Create App
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/wizards/create-account')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Create Account
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/wizards/create-project')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Create Project
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/wizards/offer-a-deal')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Offer a Deal
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Search
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/search/users')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Users
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=modals/search/select-location')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Select Location
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-layers.fs-3
+        //-         span.menu-title Widgets
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/lists')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Lists
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/statistics')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Statistics
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/charts')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Charts
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/mixed')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Mixed
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/tables')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Tables
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=widgets/feeds')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Feeds
+        //- .menu-item.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+        //-   span.menu-link.py-3
+        //-     span.menu-title Apps
+        //-     span.menu-arrow.d-lg-none
+        //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-rounded-0.py-lg-4.w-lg-225px
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-people.fs-3
+        //-         span.menu-title User Management
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Users
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/user-management/users/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Users List
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/user-management/users/view')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title View User
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Roles
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/user-management/roles/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Roles List
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/user-management/roles/view')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title View Roles
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/user-management/permissions')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Permissions
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-hr.fs-3
+        //-         span.menu-title Invoice Management
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Profile
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/invoices/view/invoice-1')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Invoice 1
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/invoices/view/invoice-2')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Invoice 2
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/invoices/create')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Create Invoice
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-hr.fs-3
+        //-         span.menu-title Support Center
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/support-center/overview')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Overview
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Tickets
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/support-center/tickets/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Ticket List
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/support-center/tickets/view')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Ticket View
+        //-         .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-           span.menu-link.py-3
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Tutorials
+        //-             span.menu-arrow
+        //-           .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/support-center/tutorials/list')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Tutorials List
+        //-             .menu-item
+        //-               a.menu-link.py-3(href='?page=apps/support-center/tutorials/post')
+        //-                 span.menu-bullet
+        //-                   span.bullet.bullet-dot
+        //-                 span.menu-title Tutorials Post
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/support-center/faq')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title FAQ
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/support-center/licenses')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Licenses
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/support-center/contact')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Contact Us
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-printer.fs-3
+        //-         span.menu-title Customers
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/customers/getting-started')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Getting Started
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/customers/list')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Customer Listing
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/customers/view')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Customer Details
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi.bi-cart2.fs-3
+        //-         span.menu-title Subscriptions
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/subscriptions/getting-started')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Getting Started
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/subscriptions/list')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Subscription List
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/subscriptions/add')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Add Subscription
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/subscriptions/view')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title View Subscription
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi-chat-left.fs-3
+        //-         span.menu-title Chat
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/chat/private')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Private Chat
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/chat/group')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Group Chat
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/chat/drawer')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Drawer Chat
+        //-     .menu-item.menu-lg-down-accordion(data-kt-menu-trigger='{default:\'click\', lg: \'hover\'}', data-kt-menu-placement='right-start')
+        //-       span.menu-link.py-3
+        //-         span.menu-icon
+        //-           i.bi-chat-left.fs-3
+        //-         span.menu-title File Manager
+        //-         span.menu-arrow
+        //-       .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-active-bg.py-lg-4.w-lg-225px
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/file-manager/folders')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Folders
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/file-manager/files')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Files
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/file-manager/blank')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Blank Directory
+        //-         .menu-item
+        //-           a.menu-link.py-3(href='?page=apps/file-manager/settings')
+        //-             span.menu-bullet
+        //-               span.bullet.bullet-dot
+        //-             span.menu-title Settings
+        //- .menu-item.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+        //-   span.menu-link.py-3
+        //-     span.menu-title Resources
+        //-     span.menu-arrow.d-lg-none
+        //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-rounded-0.py-lg-4.w-lg-225px
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=documentation/base/utilities', title='Check out over 200 in-house components, plugins and ready for use solutions', data-bs-toggle='tooltip', data-bs-trigger='hover', data-bs-dismiss='click', data-bs-placement='right')
+        //-         span.menu-icon
+        //-           // begin::Svg Icon | path: /icons/duotune/general/gen002.svg
+        //-           span.svg-icon.svg-icon-2
+        //-             svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+        //-               path(opacity='0.3', d='M4.05424 15.1982C8.34524 7.76818 13.5782 3.26318 20.9282 2.01418C21.0729 1.98837 21.2216 1.99789 21.3618 2.04193C21.502 2.08597 21.6294 2.16323 21.7333 2.26712C21.8372 2.37101 21.9144 2.49846 21.9585 2.63863C22.0025 2.7788 22.012 2.92754 21.9862 3.07218C20.7372 10.4222 16.2322 15.6552 8.80224 19.9462L4.05424 15.1982ZM3.81924 17.3372L2.63324 20.4482C2.58427 20.5765 2.5735 20.7163 2.6022 20.8507C2.63091 20.9851 2.69788 21.1082 2.79503 21.2054C2.89218 21.3025 3.01536 21.3695 3.14972 21.3982C3.28408 21.4269 3.42387 21.4161 3.55224 21.3672L6.66524 20.1802L3.81924 17.3372ZM16.5002 5.99818C16.2036 5.99818 15.9136 6.08615 15.6669 6.25097C15.4202 6.41579 15.228 6.65006 15.1144 6.92415C15.0009 7.19824 14.9712 7.49984 15.0291 7.79081C15.0869 8.08178 15.2298 8.34906 15.4396 8.55884C15.6494 8.76862 15.9166 8.91148 16.2076 8.96935C16.4986 9.02723 16.8002 8.99753 17.0743 8.884C17.3484 8.77046 17.5826 8.5782 17.7474 8.33153C17.9123 8.08486 18.0002 7.79485 18.0002 7.49818C18.0002 7.10035 17.8422 6.71882 17.5609 6.43752C17.2796 6.15621 16.8981 5.99818 16.5002 5.99818Z', fill='black')
+        //-               path(d='M4.05423 15.1982L2.24723 13.3912C2.15505 13.299 2.08547 13.1867 2.04395 13.0632C2.00243 12.9396 1.9901 12.8081 2.00793 12.679C2.02575 12.5498 2.07325 12.4266 2.14669 12.3189C2.22013 12.2112 2.31752 12.1219 2.43123 12.0582L9.15323 8.28918C7.17353 10.3717 5.4607 12.6926 4.05423 15.1982ZM8.80023 19.9442L10.6072 21.7512C10.6994 21.8434 10.8117 21.9129 10.9352 21.9545C11.0588 21.996 11.1903 22.0083 11.3195 21.9905C11.4486 21.9727 11.5718 21.9252 11.6795 21.8517C11.7872 21.7783 11.8765 21.6809 11.9402 21.5672L15.7092 14.8442C13.6269 16.8245 11.3061 18.5377 8.80023 19.9442ZM7.04023 18.1832L12.5832 12.6402C12.7381 12.4759 12.8228 12.2577 12.8195 12.032C12.8161 11.8063 12.725 11.5907 12.5653 11.4311C12.4057 11.2714 12.1901 11.1803 11.9644 11.1769C11.7387 11.1736 11.5205 11.2583 11.3562 11.4132L5.81323 16.9562L7.04023 18.1832Z', fill='black')
+        //-           // end::Svg Icon
+        //-         span.menu-title Components
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=documentation/getting-started', title='Check out the complete documentation', data-bs-toggle='tooltip', data-bs-trigger='hover', data-bs-dismiss='click', data-bs-placement='right')
+        //-         span.menu-icon
+        //-           i.bi.bi-box.fs-3
+        //-         span.menu-title Documentation
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=layout-builder', title='Build your layout, preview and export HTML for server side integration', data-bs-toggle='tooltip', data-bs-trigger='hover', data-bs-dismiss='click', data-bs-placement='right')
+        //-         span.menu-icon
+        //-           i.bi.bi-layers.fs-3
+        //-         span.menu-title Layout Builder
+        //-     .menu-item
+        //-       a.menu-link.py-3(href='?page=documentation/getting-started/changelog')
+        //-         span.menu-icon
+        //-           // begin::Svg Icon | path: icons/duotune/coding/cod003.svg
+        //-           span.svg-icon.svg-icon-2
+        //-             svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+        //-               path(d='M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z', fill='black')
+        //-               path(opacity='0.3', d='M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z', fill='black')
+        //-           // end::Svg Icon
+        //-         span.menu-title Changelog v8.0.28
+        //- .menu-item.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+        //-   span.menu-link.py-3
+        //-     span.menu-title Mega Menu
+        //-     span.menu-arrow.d-lg-none
+        //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.w-100.w-lg-600px.p-5.p-lg-5
+        //-     include _mega-menu.pug
+      // end::Menu
+    // end::Menu wrapper

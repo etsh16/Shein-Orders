@@ -1,0 +1,154 @@
+// begin::Mixed Widget 5
+html
+  head
+  body
+    .card.card-xl-stretch.mb-5.mb-xl-8
+      // begin::Beader
+      .card-header.border-0.py-5
+        h3.card-title.align-items-start.flex-column
+          span.card-label.fw-bolder.fs-3.mb-1 Trends
+          span.text-muted.fw-bold.fs-7 Latest trends
+        .card-toolbar
+          // begin::Menu
+          button.btn.btn-sm.btn-icon.btn-color-primary.btn-active-light-primary(type='button', data-kt-menu-trigger='click', data-kt-menu-placement='bottom-end')
+            // begin::Svg Icon | path: icons/duotune/general/gen024.svg
+            span.svg-icon.svg-icon-2
+              svg(xmlns='http://www.w3.org/2000/svg', width='24px', height='24px', viewBox='0 0 24 24')
+                g(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd')
+                  rect(x='5', y='5', width='5', height='5', rx='1', fill='#000000')
+                  rect(x='14', y='5', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+                  rect(x='5', y='14', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+                  rect(x='14', y='14', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+            // end::Svg Icon
+          // begin::Menu 3
+          .menu.menu-sub.menu-sub-dropdown.menu-column.menu-rounded.menu-gray-800.menu-state-bg-light-primary.fw-bold.w-200px.py-3(data-kt-menu='true')
+            // begin::Heading
+            .menu-item.px-3
+              .menu-content.text-muted.pb-2.px-3.fs-7.text-uppercase Payments
+            // end::Heading
+            // begin::Menu item
+            .menu-item.px-3
+              a.menu-link.px-3(href='#') Create Invoice
+            // end::Menu item
+            // begin::Menu item
+            .menu-item.px-3
+              a.menu-link.flex-stack.px-3(href='#')
+                | Create Payment
+
+                i.fas.fa-exclamation-circle.ms-2.fs-7(data-bs-toggle='tooltip', title='Specify a target name for future usage and reference')
+            // end::Menu item
+            // begin::Menu item
+            .menu-item.px-3
+              a.menu-link.px-3(href='#') Generate Bill
+            // end::Menu item
+            // begin::Menu item
+            .menu-item.px-3(data-kt-menu-trigger='hover', data-kt-menu-placement='right-end')
+              a.menu-link.px-3(href='#')
+                span.menu-title Subscription
+                span.menu-arrow
+              // begin::Menu sub
+              .menu-sub.menu-sub-dropdown.w-175px.py-4
+                // begin::Menu item
+                .menu-item.px-3
+                  a.menu-link.px-3(href='#') Plans
+                // end::Menu item
+                // begin::Menu item
+                .menu-item.px-3
+                  a.menu-link.px-3(href='#') Billing
+                // end::Menu item
+                // begin::Menu item
+                .menu-item.px-3
+                  a.menu-link.px-3(href='#') Statements
+                // end::Menu item
+                // begin::Menu separator
+                .separator.my-2
+                // end::Menu separator
+                // begin::Menu item
+                .menu-item.px-3
+                  .menu-content.px-3
+                    // begin::Switch
+                    label.form-check.form-switch.form-check-custom.form-check-solid
+                      // begin::Input
+                      input.form-check-input.w-30px.h-20px(type='checkbox', value='1', checked, name='notifications')
+                      // end::Input
+                      // end::Label
+                      span.form-check-label.text-muted.fs-6 Recuring
+                      // end::Label
+                    // end::Switch
+                // end::Menu item
+              // end::Menu sub
+            // end::Menu item
+            // begin::Menu item
+            .menu-item.px-3.my-1
+              a.menu-link.px-3(href='#') Settings
+            // end::Menu item
+          // end::Menu 3
+          // end::Menu
+      // end::Header
+      // begin::Body
+      .card-body.d-flex.flex-column
+        // begin::Chart
+        .mixed-widget-5-chart.card-rounded-top(data-kt-chart-color='danger', style='height: 150px')
+        // end::Chart
+        // begin::Items
+        .mt-5
+          // begin::Item
+          .d-flex.flex-stack.mb-5
+            // begin::Section
+            .d-flex.align-items-center.me-2
+              // begin::Symbol
+              .symbol.symbol-50px.me-3
+                .symbol-label.bg-light
+                  img.h-50(src='assets/media/svg/brand-logos/plurk.svg', alt)
+              // end::Symbol
+              // begin::Title
+              div
+                a.fs-6.text-gray-800.text-hover-primary.fw-bolder(href='#') Top Authors
+                .fs-7.text-muted.fw-bold.mt-1 Ricky Hunt, Sandra Trepp
+              // end::Title
+            // end::Section
+            // begin::Label
+            .badge.badge-light.fw-bold.py-4.px-3 +82$
+            // end::Label
+          // end::Item
+          // begin::Item
+          .d-flex.flex-stack.mb-5
+            // begin::Section
+            .d-flex.align-items-center.me-2
+              // begin::Symbol
+              .symbol.symbol-50px.me-3
+                .symbol-label.bg-light
+                  img.h-50(src='assets/media/svg/brand-logos/figma-1.svg', alt)
+              // end::Symbol
+              // begin::Title
+              div
+                a.fs-6.text-gray-800.text-hover-primary.fw-bolder(href='#') Top Sales
+                .fs-7.text-muted.fw-bold.mt-1 PitStop Emails
+              // end::Title
+            // end::Section
+            // begin::Label
+            .badge.badge-light.fw-bold.py-4.px-3 +82$
+            // end::Label
+          // end::Item
+          // begin::Item
+          .d-flex.flex-stack
+            // begin::Section
+            .d-flex.align-items-center.me-2
+              // begin::Symbol
+              .symbol.symbol-50px.me-3
+                .symbol-label.bg-light
+                  img.h-50(src='assets/media/svg/brand-logos/vimeo.svg', alt)
+              // end::Symbol
+              // begin::Title
+              .py-1
+                a.fs-6.text-gray-800.text-hover-primary.fw-bolder(href='#') Top Engagement
+                .fs-7.text-muted.fw-bold.mt-1 KT.com
+              // end::Title
+            // end::Section
+            // begin::Label
+            .badge.badge-light.fw-bold.py-4.px-3 +82$
+            // end::Label
+          // end::Item
+        // end::Items
+      // end::Body
+    // end::Mixed Widget 5

@@ -1,46 +1,45 @@
-block variables
 doctype html
-html
+html(lang='en')
+  // begin::Head
   head
-    meta(charset="utf-8")
-    link(rel="shortcut icon", href="/favicon.ico")
-    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
-    meta(name="theme-color", content="#000000")
-    title #{title} | WHATABYTE
-
-    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
-    link(rel="stylesheet" href="/assets/css/nucleo-icons.css")
-    link(rel="stylesheet" href="/assets/css/nucleo-svg.css")
-    link(rel="stylesheet" href="https://kit.fontawesome.com/42d5adcbca.js"  crossorigin="anonymous")
-    link(rel="stylesheet" href="/assets/css/soft-ui-dashboard.css")
-  body
-    nav.navbar.navbar-expand-lg.navbar-dark.bg-gradient-dark.z-index-3.py-3
-      .container
-        a.navbar-brand.text-white(href='' rel='tooltip' title='Designed and Coded by Creative Tim' data-placement='bottom' target='_blank')
-          | SHEIN Orders
-        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navigation' aria-controls='navigation' aria-expanded='false' aria-label='Toggle navigation')
-          span.navbar-toggler-icon
-        #navigation.collapse.navbar-collapse
-          ul.navbar-nav.navbar-nav-hover.ms-auto
-            .row
-              .col-auto.m-auto
-                a.text-white.cursor-pointer
-                  i.fa.fa-cog.fixed-plugin-button-nav
-              .col-auto.m-auto
-                .dropdown
-                  a#dropdownMenuButton.text-white.cursor-pointer(type='button' data-bs-toggle='dropdown' aria-expanded='false')
-                    i.fa.fa-bell
-                  ul.dropdown-menu.dropdown-menu-right.px-2.py-3.ms-n4(aria-labelledby='dropdownMenuButton')
-                    | ...
-              .col-auto
-                .bg-white.border-radius-lg.d-flex.me-2
-                  input.form-control.border-0.ps-3(type='text' placeholder='Type here...')
-                  button.btn.bg-gradient-primary.my-1.me-1 Search
-    div.ct-docs-main-container#root
-      div.ct-docs-main-content-row
-        block layout-content
-
-  script(src="/js/jquery.min.js") 
-  script(src="/assets/js/core/popper.min.js") 
-  script(src="/assets/js/core/bootstrap.min.js") 
-  script(src="/assets/js/soft-ui-dashboard.min.js") 
+    base(href)
+    title #{title} 
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    meta(property='og:locale', content='en_US')
+    meta(property='og:type', content='article')
+    link(rel='shortcut icon', href='assets/media/logos/favicon.ico')
+    // begin::Fonts
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700')
+    // end::Fonts
+    // begin::Page Vendor Stylesheets(used by this page)
+    link(href='assets/plugins/custom/fullcalendar/fullcalendar.bundle.css', rel='stylesheet', type='text/css')
+    // end::Page Vendor Stylesheets
+    // begin::Global Stylesheets Bundle(used by all pages)
+    link(href='assets/plugins/global/plugins.bundle.css', rel='stylesheet', type='text/css')
+    link(href='assets/css/style.bundle.css', rel='stylesheet', type='text/css')
+    // end::Global Stylesheets Bundle
+  // end::Head
+  // begin::Body
+  body#kt_body.page-loading-enabled.page-loading.header-fixed.header-tablet-and-mobile-fixed
+    include layout/_loader.pug
+    include layout/master.pug
+    script var hostUrl = "assets/";
+    // begin::Javascript
+    // begin::Global Javascript Bundle(used by all pages)
+    script(src='js/jquery.js')
+    script(src='assets/plugins/global/plugins.bundle.js')
+    script(src='assets/js/scripts.bundle.js')
+    // end::Global Javascript Bundle
+    // begin::Page Vendors Javascript(used by this page)
+    script(src='assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')
+    // end::Page Vendors Javascript
+    // begin::Page Custom Javascript(used by this page)
+    script(src='assets/js/custom/widgets.js')
+    script(src='assets/js/custom/apps/chat/chat.js')
+    script(src='assets/js/custom/modals/create-app.js')
+    script(src='assets/js/custom/modals/upgrade-plan.js')
+    script(src='assets/js/custom/intro.js')
+    // end::Page Custom Javascript
+    // end::Javascript
+  // end::Body

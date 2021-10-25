@@ -1,0 +1,170 @@
+// begin::Modal - Create App
+html
+  head
+  body
+    .modal.fade#kt_modal_create_app(tabindex='-1', aria-hidden='true')
+      // begin::Modal dialog
+      .modal-dialog.modal-dialog-centered.mw-900px
+        // begin::Modal content
+        .modal-content
+          // begin::Modal header
+          .modal-header
+            // begin::Modal title
+            h2 Create App
+            // end::Modal title
+            // begin::Close
+            .btn.btn-sm.btn-icon.btn-active-color-primary(data-bs-dismiss='modal')
+              // begin::Svg Icon | path: icons/duotune/arrows/arr061.svg
+              span.svg-icon.svg-icon-1
+                svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                  rect(opacity='0.5', x='6', y='17.3137', width='16', height='2', rx='1', transform='rotate(-45 6 17.3137)', fill='black')
+                  rect(x='7.41422', y='6', width='16', height='2', rx='1', transform='rotate(45 7.41422 6)', fill='black')
+              // end::Svg Icon
+            // end::Close
+          // end::Modal header
+          // begin::Modal body
+          .modal-body.py-lg-10.px-lg-10
+            // begin::Stepper
+            .stepper.stepper-pills.stepper-column.d-flex.flex-column.flex-xl-row.flex-row-fluid#kt_modal_create_app_stepper
+              // begin::Aside
+              .d-flex.justify-content-center.justify-content-xl-start.flex-row-auto.w-100.w-xl-300px
+                // begin::Nav
+                .stepper-nav.ps-lg-10
+                  // begin::Step 1
+                  .stepper-item.current(data-kt-stepper-element='nav')
+                    // begin::Line
+                    .stepper-line.w-40px
+                    // end::Line
+                    // begin::Icon
+                    .stepper-icon.w-40px.h-40px
+                      i.stepper-check.fas.fa-check
+                      span.stepper-number 1
+                    // end::Icon
+                    // begin::Label
+                    .stepper-label
+                      h3.stepper-title Details
+                      .stepper-desc Name your App
+                    // end::Label
+                  // end::Step 1
+                  // begin::Step 2
+                  .stepper-item(data-kt-stepper-element='nav')
+                    // begin::Line
+                    .stepper-line.w-40px
+                    // end::Line
+                    // begin::Icon
+                    .stepper-icon.w-40px.h-40px
+                      i.stepper-check.fas.fa-check
+                      span.stepper-number 2
+                    // begin::Icon
+                    // begin::Label
+                    .stepper-label
+                      h3.stepper-title Frameworks
+                      .stepper-desc Define your app framework
+                    // begin::Label
+                  // end::Step 2
+                  // begin::Step 3
+                  .stepper-item(data-kt-stepper-element='nav')
+                    // begin::Line
+                    .stepper-line.w-40px
+                    // end::Line
+                    // begin::Icon
+                    .stepper-icon.w-40px.h-40px
+                      i.stepper-check.fas.fa-check
+                      span.stepper-number 3
+                    // end::Icon
+                    // begin::Label
+                    .stepper-label
+                      h3.stepper-title Database
+                      .stepper-desc Select the app database type
+                    // end::Label
+                  // end::Step 3
+                  // begin::Step 4
+                  .stepper-item(data-kt-stepper-element='nav')
+                    // begin::Line
+                    .stepper-line.w-40px
+                    // end::Line
+                    // begin::Icon
+                    .stepper-icon.w-40px.h-40px
+                      i.stepper-check.fas.fa-check
+                      span.stepper-number 4
+                    // end::Icon
+                    // begin::Label
+                    .stepper-label
+                      h3.stepper-title Billing
+                      .stepper-desc Provide payment details
+                    // end::Label
+                  // end::Step 4
+                  // begin::Step 5
+                  .stepper-item(data-kt-stepper-element='nav')
+                    // begin::Line
+                    .stepper-line.w-40px
+                    // end::Line
+                    // begin::Icon
+                    .stepper-icon.w-40px.h-40px
+                      i.stepper-check.fas.fa-check
+                      span.stepper-number 5
+                    // end::Icon
+                    // begin::Label
+                    .stepper-label
+                      h3.stepper-title Completed
+                      .stepper-desc Review and Submit
+                    // end::Label
+                  // end::Step 5
+                // end::Nav
+              // begin::Aside
+              // begin::Content
+              .flex-row-fluid.py-lg-5.px-lg-15
+                // begin::Form
+                form.form#kt_modal_create_app_form(novalidate)
+                  include partials/modals/create-app/steps/_step-1.pug
+                  include partials/modals/create-app/steps/_step-2.pug
+                  include partials/modals/create-app/steps/_step-3.pug
+                  include partials/modals/create-app/steps/_step-4.pug
+                  include partials/modals/create-app/steps/_step-5.pug
+                  // begin::Actions
+                  .d-flex.flex-stack.pt-10
+                    // begin::Wrapper
+                    .me-2
+                      button.btn.btn-lg.btn-light-primary.me-3(type='button', data-kt-stepper-action='previous')
+                        // begin::Svg Icon | path: icons/duotune/arrows/arr063.svg
+                        span.svg-icon.svg-icon-3.me-1
+                          svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                            rect(opacity='0.5', x='6', y='11', width='13', height='2', rx='1', fill='black')
+                            path(d='M8.56569 11.4343L12.75 7.25C13.1642 6.83579 13.1642 6.16421 12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75L5.70711 11.2929C5.31658 11.6834 5.31658 12.3166 5.70711 12.7071L11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25C13.1642 17.8358 13.1642 17.1642 12.75 16.75L8.56569 12.5657C8.25327 12.2533 8.25327 11.7467 8.56569 11.4343Z', fill='black')
+                        // end::Svg Icon
+                        | Back
+                    // end::Wrapper
+                    // begin::Wrapper
+                    div
+                      button.btn.btn-lg.btn-primary(type='button', data-kt-stepper-action='submit')
+                        span.indicator-label
+                          | Submit
+
+                          // begin::Svg Icon | path: icons/duotune/arrows/arr064.svg
+                          span.svg-icon.svg-icon-3.ms-2.me-0
+                            svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                              rect(opacity='0.5', x='18', y='13', width='13', height='2', rx='1', transform='rotate(-180 18 13)', fill='black')
+                              path(d='M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z', fill='black')
+                          // end::Svg Icon
+                        span.indicator-progress
+                          | Please wait...
+
+                          span.spinner-border.spinner-border-sm.align-middle.ms-2
+                      button.btn.btn-lg.btn-primary(type='button', data-kt-stepper-action='next')
+                        | Continue
+
+                        // begin::Svg Icon | path: icons/duotune/arrows/arr064.svg
+                        span.svg-icon.svg-icon-3.ms-1.me-0
+                          svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                            rect(opacity='0.5', x='18', y='13', width='13', height='2', rx='1', transform='rotate(-180 18 13)', fill='black')
+                            path(d='M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z', fill='black')
+                        // end::Svg Icon
+                    // end::Wrapper
+                  // end::Actions
+                // end::Form
+              // end::Content
+            // end::Stepper
+          // end::Modal body
+        // end::Modal content
+      // end::Modal dialog
+    // end::Modal - Create App

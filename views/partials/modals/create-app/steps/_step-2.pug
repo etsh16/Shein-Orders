@@ -1,0 +1,95 @@
+// begin::Step 2
+html
+  head
+  body
+    div(data-kt-stepper-element='content')
+      .w-100
+        // begin::Input group
+        .fv-row
+          // begin::Label
+          label.d-flex.align-items-center.fs-5.fw-bold.mb-4
+            span.required Select Framework
+            i.fas.fa-exclamation-circle.ms-2.fs-7(data-bs-toggle='tooltip', title='Specify your apps framework')
+          // end::Label
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer.mb-5
+            // begin:Label
+            span.d-flex.align-items-center.me-2
+              // begin:Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-warning
+                  i.fab.fa-html5.text-warning.fs-2x
+              // end:Icon
+              // begin:Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 HTML5
+                span.fs-7.text-muted Base Web Projec
+              // end:Info
+            // end:Label
+            // begin:Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', checked, name='framework', value='1')
+            // end:Input
+          // end::Option
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer.mb-5
+            // begin:Label
+            span.d-flex.align-items-center.me-2
+              // begin:Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-success
+                  i.fab.fa-react.text-success.fs-2x
+              // end:Icon
+              // begin:Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 ReactJS
+                span.fs-7.text-muted Robust and flexible app framework
+              // end:Info
+            // end:Label
+            // begin:Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='framework', value='2')
+            // end:Input
+          // end::Option
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer.mb-5
+            // begin:Label
+            span.d-flex.align-items-center.me-2
+              // begin:Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-danger
+                  i.fab.fa-angular.text-danger.fs-2x
+              // end:Icon
+              // begin:Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 Angular
+                span.fs-7.text-muted Powerful data mangement
+              // end:Info
+            // end:Label
+            // begin:Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='framework', value='3')
+            // end:Input
+          // end::Option
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer
+            // begin:Label
+            span.d-flex.align-items-center.me-2
+              // begin:Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-primary
+                  i.fab.fa-vuejs.text-primary.fs-2x
+              // end:Icon
+              // begin:Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 Vue
+                span.fs-7.text-muted Lightweight and responsive framework
+              // end:Info
+            // end:Label
+            // begin:Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='framework', value='4')
+            // end:Input
+          // end::Option
+        // end::Input group
+    // end::Step 2

@@ -1,0 +1,66 @@
+// begin::Menu 3
+html
+  head
+  body
+    .menu.menu-sub.menu-sub-dropdown.menu-column.menu-rounded.menu-gray-800.menu-state-bg-light-primary.fw-bold.w-200px.py-3(data-kt-menu='true')
+      // begin::Heading
+      .menu-item.px-3
+        .menu-content.text-muted.pb-2.px-3.fs-7.text-uppercase Payments
+      // end::Heading
+      // begin::Menu item
+      .menu-item.px-3
+        a.menu-link.px-3(href='#') Create Invoice
+      // end::Menu item
+      // begin::Menu item
+      .menu-item.px-3
+        a.menu-link.flex-stack.px-3(href='#')
+          | Create Payment
+
+          i.fas.fa-exclamation-circle.ms-2.fs-7(data-bs-toggle='tooltip', title='Specify a target name for future usage and reference')
+      // end::Menu item
+      // begin::Menu item
+      .menu-item.px-3
+        a.menu-link.px-3(href='#') Generate Bill
+      // end::Menu item
+      // begin::Menu item
+      .menu-item.px-3(data-kt-menu-trigger='hover', data-kt-menu-placement='right-end')
+        a.menu-link.px-3(href='#')
+          span.menu-title Subscription
+          span.menu-arrow
+        // begin::Menu sub
+        .menu-sub.menu-sub-dropdown.w-175px.py-4
+          // begin::Menu item
+          .menu-item.px-3
+            a.menu-link.px-3(href='#') Plans
+          // end::Menu item
+          // begin::Menu item
+          .menu-item.px-3
+            a.menu-link.px-3(href='#') Billing
+          // end::Menu item
+          // begin::Menu item
+          .menu-item.px-3
+            a.menu-link.px-3(href='#') Statements
+          // end::Menu item
+          // begin::Menu separator
+          .separator.my-2
+          // end::Menu separator
+          // begin::Menu item
+          .menu-item.px-3
+            .menu-content.px-3
+              // begin::Switch
+              label.form-check.form-switch.form-check-custom.form-check-solid
+                // begin::Input
+                input.form-check-input.w-30px.h-20px(type='checkbox', value='1', checked, name='notifications')
+                // end::Input
+                // end::Label
+                span.form-check-label.text-muted.fs-6 Recuring
+                // end::Label
+              // end::Switch
+          // end::Menu item
+        // end::Menu sub
+      // end::Menu item
+      // begin::Menu item
+      .menu-item.px-3.my-1
+        a.menu-link.px-3(href='#') Settings
+      // end::Menu item
+    // end::Menu 3

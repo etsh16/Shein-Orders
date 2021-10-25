@@ -1,0 +1,123 @@
+// begin::List Widget 3
+html
+  head
+  body
+    .card.card-xl-stretch.mb-5.mb-xl-8
+      // begin::Header
+      .card-header.border-0
+        h3.card-title.fw-bolder.text-dark Todo
+        .card-toolbar
+          // begin::Menu
+          button.btn.btn-sm.btn-icon.btn-color-primary.btn-active-light-primary(type='button', data-kt-menu-trigger='click', data-kt-menu-placement='bottom-end')
+            // begin::Svg Icon | path: icons/duotune/general/gen024.svg
+            span.svg-icon.svg-icon-2
+              svg(xmlns='http://www.w3.org/2000/svg', width='24px', height='24px', viewBox='0 0 24 24')
+                g(stroke='none', stroke-width='1', fill='none', fill-rule='evenodd')
+                  rect(x='5', y='5', width='5', height='5', rx='1', fill='#000000')
+                  rect(x='14', y='5', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+                  rect(x='5', y='14', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+                  rect(x='14', y='14', width='5', height='5', rx='1', fill='#000000', opacity='0.3')
+            // end::Svg Icon
+          //include /menus/_menu-3.pug
+          // end::Menu
+      // end::Header
+      // begin::Body
+      .card-body.pt-2
+        // begin::Item
+        .d-flex.align-items-center.mb-8
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-success
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') Create FireStone Logo
+            span.text-muted.fw-bold.d-block Due in 2 Days
+          // end::Description
+          span.badge.badge-light-success.fs-8.fw-bolder New
+        // end:Item
+        // begin::Item
+        .d-flex.align-items-center.mb-8
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-primary
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') Stakeholder Meeting
+            span.text-muted.fw-bold.d-block Due in 3 Days
+          // end::Description
+          span.badge.badge-light-primary.fs-8.fw-bolder New
+        // end:Item
+        // begin::Item
+        .d-flex.align-items-center.mb-8
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-warning
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') Scoping & Estimations
+            span.text-muted.fw-bold.d-block Due in 5 Days
+          // end::Description
+          span.badge.badge-light-warning.fs-8.fw-bolder New
+        // end:Item
+        // begin::Item
+        .d-flex.align-items-center.mb-8
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-primary
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') KPI App Showcase
+            span.text-muted.fw-bold.d-block Due in 2 Days
+          // end::Description
+          span.badge.badge-light-primary.fs-8.fw-bolder New
+        // end:Item
+        // begin::Item
+        .d-flex.align-items-center.mb-8
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-danger
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') Project Meeting
+            span.text-muted.fw-bold.d-block Due in 12 Days
+          // end::Description
+          span.badge.badge-light-danger.fs-8.fw-bolder New
+        // end:Item
+        // begin::Item
+        .d-flex.align-items-center
+          // begin::Bullet
+          span.bullet.bullet-vertical.h-40px.bg-success
+          // end::Bullet
+          // begin::Checkbox
+          .form-check.form-check-custom.form-check-solid.mx-5
+            input.form-check-input(type='checkbox')
+          // end::Checkbox
+          // begin::Description
+          .flex-grow-1
+            a.text-gray-800.text-hover-primary.fw-bolder.fs-6(href='#') Customers Update
+            span.text-muted.fw-bold.d-block Due in 1 week
+          // end::Description
+          span.badge.badge-light-success.fs-8.fw-bolder New
+        // end:Item
+      // end::Body
+    // end:List Widget 3

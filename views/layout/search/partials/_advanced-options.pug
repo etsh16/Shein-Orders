@@ -1,0 +1,91 @@
+// begin::Preferences
+html
+  head
+  body
+    form.pt-1.d-none(data-kt-search-element='advanced-options-form')
+      // begin::Heading
+      h3.fw-bold.text-dark.mb-7 Advanced Search
+      // end::Heading
+      // begin::Input group
+      .mb-5
+        input.form-control.form-control-sm.form-control-solid(type='text', placeholder='Contains the word', name='query')
+      // end::Input group
+      // begin::Input group
+      .mb-5
+        // begin::Radio group
+        .nav-group.nav-group-fluid
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='type', value='has', checked)
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary All
+          // end::Option
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='type', value='users')
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary.px-4 Users
+          // end::Option
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='type', value='orders')
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary.px-4 Orders
+          // end::Option
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='type', value='projects')
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary.px-4 Projects
+          // end::Option
+        // end::Radio group
+      // end::Input group
+      // begin::Input group
+      .mb-5
+        input.form-control.form-control-sm.form-control-solid(type='text', name='assignedto', placeholder='Assigned to')
+      // end::Input group
+      // begin::Input group
+      .mb-5
+        input.form-control.form-control-sm.form-control-solid(type='text', name='collaborators', placeholder='Collaborators')
+      // end::Input group
+      // begin::Input group
+      .mb-5
+        // begin::Radio group
+        .nav-group.nav-group-fluid
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='attachment', value='has', checked)
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary Has attachment
+          // end::Option
+          // begin::Option
+          label
+            input.btn-check(type='radio', name='attachment', value='any')
+            span.btn.btn-sm.btn-color-muted.btn-active.btn-active-primary.px-4 Any
+          // end::Option
+        // end::Radio group
+      // end::Input group
+      // begin::Input group
+      .mb-5
+        select.form-select.form-select-sm.form-select-solid(name='timezone', aria-label='Select a Timezone', data-control='select2', data-placeholder='date_period')
+          option(value='next') Within the next
+          option(value='last') Within the last
+          option(value='between') Between
+          option(value='on') On
+      // end::Input group
+      // begin::Input group
+      .row.mb-8
+        // begin::Col
+        .col-6
+          input.form-control.form-control-sm.form-control-solid(type='number', name='date_number', placeholder='Lenght')
+        // end::Col
+        // begin::Col
+        .col-6
+          select.form-select.form-select-sm.form-select-solid(name='date_typer', aria-label='Select a Timezone', data-control='select2', data-placeholder='Period')
+            option(value='days') Days
+            option(value='weeks') Weeks
+            option(value='months') Months
+            option(value='years') Years
+        // end::Col
+      // end::Input group
+      // begin::Actions
+      .d-flex.justify-content-end
+        button.btn.btn-sm.btn-light.fw-bolder.btn-active-light-primary.me-2(type='reset', data-kt-search-element='advanced-options-form-cancel') Cancel
+        a.btn.btn-sm.fw-bolder.btn-primary(href='?page=pages/search/horizontal', data-kt-search-element='advanced-options-form-search') Search
+      // end::Actions
+    // end::Preferences

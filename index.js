@@ -5,14 +5,14 @@ const bodyParser = require('body-parser')
 const cors = require("cors");
 const port = process.env.PORT || "8000";
 const v1 = require("./src/routers/v1");
-
+const request = require('request');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
 app.use(cors());
 app.use(express.json({limit: '50mb'}));
 app.use(express.urlencoded({ extended: true ,limit: '50mb'}));
-app.use('/assets',express.static(path.join(__dirname, "assets")));
+app.use('/assets',express.static(path.join(__dirname, "/views/assets")));
 app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 app.use("/api", v1);
@@ -21,6 +21,17 @@ app.use("/api", v1);
 app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
+
+
+app.post("/", (req, res) => {
+  request('http://127.0.0.1:3000/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      let jsonData = JSON.parse(body);
+      res.render("result", { data:jsonData, title: "result" });
+    }
+  })
+});
+
 
 
 app.listen(port, () => {

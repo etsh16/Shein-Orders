@@ -1,0 +1,304 @@
+// begin::Exolore drawer toggle
+html
+  head
+  body
+    button#kt_explore_toggle.explore-toggle.btn.btn-sm.bg-body.btn-color-gray-700.btn-active-primary.shadow-sm.position-fixed.px-5.fw-bolder.zindex-2.top-50.mt-10.end-0.transform-90.fs-6.rounded-top-0(title='Explore Metronic', data-bs-toggle='tooltip', data-bs-placement='right', data-bs-trigger='hover')
+      span#kt_explore_toggle_label Explore
+    // end::Exolore drawer toggle
+    // begin::Exolore drawer
+    #kt_explore.bg-body(data-kt-drawer='true', data-kt-drawer-name='explore', data-kt-drawer-activate='true', data-kt-drawer-overlay='true', data-kt-drawer-width='{default:\'350px\', \'lg\': \'475px\'}', data-kt-drawer-direction='end', data-kt-drawer-toggle='#kt_explore_toggle', data-kt-drawer-close='#kt_explore_close')
+      // begin::Card
+      .card.shadow-none.rounded-0.w-100
+        // begin::Header
+        .card-header#kt_explore_header
+          h3.card-title.fw-bolder.text-gray-700 Explore Metronic
+          .card-toolbar
+            button.btn.btn-sm.btn-icon.btn-active-light-primary.me-n5#kt_explore_close(type='button')
+              // begin::Svg Icon | path: icons/duotune/arrows/arr061.svg
+              span.svg-icon.svg-icon-2
+                svg(xmlns='http://www.w3.org/2000/svg', width='24', height='24', viewBox='0 0 24 24', fill='none')
+                  rect(opacity='0.5', x='6', y='17.3137', width='16', height='2', rx='1', transform='rotate(-45 6 17.3137)', fill='black')
+                  rect(x='7.41422', y='6', width='16', height='2', rx='1', transform='rotate(45 7.41422 6)', fill='black')
+              // end::Svg Icon
+        // end::Header
+        // begin::Body
+        .card-body#kt_explore_body
+          // begin::Content
+          #kt_explore_scroll.scroll-y.me-n5.pe-5(data-kt-scroll='true', data-kt-scroll-height='auto', data-kt-scroll-wrappers='#kt_explore_body', data-kt-scroll-dependencies='#kt_explore_header', data-kt-scroll-offset='5px')
+            // begin::Wrapper
+            .mb-0
+              // begin::Header
+              .mb-7
+                .d-flex.flex-stack
+                  h3.mb-0 Metronic Licenses
+                  a.fw-bold(href='https://themeforest.net/licenses/standard', target='_blank') License FAQs
+              // end::Header
+              // begin::License
+              .rounded.border.border-dashed.border-gray-300.py-4.px-6.mb-5
+                .d-flex.flex-stack
+                  .d-flex.flex-column
+                    .d-flex.align-items-center.mb-1
+                      .fs-6.fw-bold.text-gray-800.fw-bold.mb-0.me-1 Regular License
+                      i.text-gray-400.fas.fa-exclamation-circle.ms-1.fs-7(data-bs-toggle='popover', data-bs-custom-class='popover-dark', data-bs-trigger='hover', data-bs-placement='top', data-bs-content='Use, by you or one client in a single end product which end users are not charged for.')
+                    .fs-7.text-muted For single end product used by you or one client
+                  .text-nowrap
+                    span.text-muted.fs-7.fw-bold.me-n1 $
+                    span.text-dark.fs-1.fw-bolder 39
+              // end::License
+              // begin::License
+              .rounded.border.border-dashed.border-gray-300.py-4.px-6.mb-5
+                .d-flex.flex-stack
+                  .d-flex.flex-column
+                    .d-flex.align-items-center.mb-1
+                      .fs-6.fw-bold.text-gray-800.fw-bold.mb-0.me-1 Extended License
+                      i.text-gray-400.fas.fa-exclamation-circle.ms-1.fs-7(data-bs-toggle='popover', data-bs-custom-class='popover-dark', data-bs-trigger='hover', data-bs-placement='top', data-bs-content='Use, by you or one client, in a single end product which end users can be charged for.')
+                    .fs-7.text-muted For single end product with paying users.
+                  .text-nowrap
+                    span.text-muted.fs-7.fw-bold.me-n1 $
+                    span.text-dark.fs-1.fw-bolder 939
+              // end::License
+              // begin::License
+              .rounded.border.border-dashed.border-gray-300.py-4.px-6.mb-5
+                .d-flex.flex-stack
+                  .d-flex.flex-column
+                    .d-flex.align-items-center.mb-1
+                      .fs-6.fw-bold.text-gray-800.fw-bold.mb-0.me-1 Custom License
+                    .fs-7.text-muted Reach us for custom license offers.
+                  .text-nowrap
+                    a.btn.btn-sm.btn-success(href='https://keenthemes.com/contact/', target='_blank') Contact Us
+              // end::License
+              // begin::Purchase
+              a.btn.btn-primary.mb-15.w-100(href='https://1.envato.market/EA4JP') Buy Now
+              // end::Purchase
+              // begin::Demos
+              .mb-0
+                h3.fw-bolder.text-center.mb-6 Metronic Demos
+                // begin::Row
+                .row.g-5
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo1.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo1') Demo 1
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo2.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo2') Demo 2
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo3.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo3') Demo 3
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo4.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo4') Demo 4
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo5.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo5') Demo 5
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-success.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo6.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo6') Demo 6
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo7.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo7') Demo 7
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo8.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo8') Demo 8
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo9.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo9') Demo 9
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo10.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo10') Demo 10
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo11.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo11') Demo 11
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo12.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo12') Demo 12
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100(src='assets/media/demos/demo13.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        a.btn.btn-sm.btn-success.shadow(href='https://preview.keenthemes.com/metronic8/demo13') Demo 13
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo14.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo15.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo16.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo17.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo18.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo19.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo20.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo21.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                  // begin::Col
+                  .col-6
+                    // begin::Demo
+                    .overlay.overflow-hidden.position-relative.border.border-4.border-gray-200.rounded
+                      .overlay-wrapper
+                        img.w-100.opacity-25(src='assets/media/demos/demo22.png', alt='demo')
+                      .overlay-layer.bg-dark.bg-opacity-10
+                        .badge.badge-white.px-6.py-4.fw-bold.fs-base.shadow Coming soon
+                    // end::Demo
+                  // end::Col
+                // end::Row
+              // end::Demos
+            // end::Wrapper
+          // end::Content
+        // end::Body
+      // end::Card
+    // end::Exolore drawer

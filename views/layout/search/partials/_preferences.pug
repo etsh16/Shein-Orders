@@ -1,0 +1,44 @@
+// begin::Preferences
+html
+  head
+  body
+    form.pt-1.d-none(data-kt-search-element='preferences')
+      // begin::Heading
+      h3.fw-bold.text-dark.mb-7 Search Preferences
+      // end::Heading
+      // begin::Input group
+      .pb-4.border-bottom
+        label.form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid.flex-stack
+          span.form-check-label.text-gray-700.fs-6.fw-bold.ms-0.me-2 Projects
+          input.form-check-input(type='checkbox', value='1', checked)
+      // end::Input group
+      // begin::Input group
+      .py-4.border-bottom
+        label.form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid.flex-stack
+          span.form-check-label.text-gray-700.fs-6.fw-bold.ms-0.me-2 Targets
+          input.form-check-input(type='checkbox', value='1', checked)
+      // end::Input group
+      // begin::Input group
+      .py-4.border-bottom
+        label.form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid.flex-stack
+          span.form-check-label.text-gray-700.fs-6.fw-bold.ms-0.me-2 Affiliate Programs
+          input.form-check-input(type='checkbox', value='1')
+      // end::Input group
+      // begin::Input group
+      .py-4.border-bottom
+        label.form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid.flex-stack
+          span.form-check-label.text-gray-700.fs-6.fw-bold.ms-0.me-2 Referrals
+          input.form-check-input(type='checkbox', value='1', checked)
+      // end::Input group
+      // begin::Input group
+      .py-4.border-bottom
+        label.form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid.flex-stack
+          span.form-check-label.text-gray-700.fs-6.fw-bold.ms-0.me-2 Users
+          input.form-check-input(type='checkbox', value='1')
+      // end::Input group
+      // begin::Actions
+      .d-flex.justify-content-end.pt-7
+        button.btn.btn-sm.btn-light.fw-bolder.btn-active-light-primary.me-2(type='reset', data-kt-search-element='preferences-dismiss') Cancel
+        button.btn.btn-sm.fw-bolder.btn-primary(type='submit') Save Changes
+      // end::Actions
+    // end::Preferences

@@ -1,33 +1,26 @@
 extends layout
 
 block layout-content
-  div.ct-docs-page-title
-    h1#content.ct-docs-page-h1-title
-
-    .avatar-group.mt-3
-
-  div.text-center.row
-    div.col-2.mx-auto.my-auto
-     span  Board Link
-    div.col-8.mx-auto.my-auto
-      input.form-control(type="text")#bord-link
-    div.col-2.mx-auto.my-auto
-      button.btn.btn-primary.mb-0(onclick='loadLink()') submit
-    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
-      h4.text-light.m-0 Total items  
-      h5.text-light.m-0
-        strong#total-items 0
-    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
-      h4.text-light.m-0 Total Price as RS  
-      h5.text-light.m-0
-        strong#total-or-price 0  
-    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
-      h4.text-light.m-0 Total Price as EGP   
-      h5.text-light.m-0
-        strong#total-eg-price 0
-    div.card.card-frame.col-2.mx-auto.alert.alert-secondary.m-3
-      h4.text-light.m-0 Over Total Price  
-      h5.text-light.m-0
-        strong#total-over 0  
-    div#result
-  script(src="/js/home.js") 
+  div#kt_content_container.container-xxl
+    .g-5.gx-xxl-8
+      // begin::Card
+      .card.mb-7
+        // begin::Card body
+        form.card-body(method='POST' action='/')
+          // begin::Compact form
+          .d-flex.align-items-center
+            // begin::Input group
+            .position-relative.w-100.me-md-2
+              input.form-control.form-control-solid.ps-10.text-center(name='link',type='text', value='', placeholder='Board Link')#bord-link
+            // end::Input group
+            // begin:Action
+            .d-flex.align-items-center
+              button.btn.btn-primary(type='submit') Search
+            // end:Action
+          // end::Compact form
+    .g-5.gx-xxl-8
+      // begin::Col
+      include partials/widgets/lists/_widget-9.pug
+    //-   // end::Col
+    .g-5.gx-xxl-8
+      include partials/widgets/tables/_widget-10.pug

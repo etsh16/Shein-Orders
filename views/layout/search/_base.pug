@@ -1,0 +1,23 @@
+// begin::Search
+html
+  head
+  body
+    #kt_header_search.d-flex.align-items-stretch(data-kt-search-keypress='true', data-kt-search-min-length='2', data-kt-search-enter='enter', data-kt-search-layout='menu', data-kt-menu-trigger='auto', data-kt-menu-overflow='false', data-kt-menu-permanent='true', data-kt-menu-placement='bottom-end')
+      // begin::Search toggle
+      .d-flex.align-items-center#kt_header_search_toggle(data-kt-search-element='toggle')
+        .btn.btn-icon.btn-active-light-primary.w-30px.h-30px.w-md-40px.h-md-40px
+          i.bi.bi-search.fs-2
+      // end::Search toggle
+      // begin::Menu
+      .menu.menu-sub.menu-sub-dropdown.p-7.w-325px.w-md-375px(data-kt-search-element='content')
+        // begin::Wrapper
+        div(data-kt-search-element='wrapper')
+          include partials/_form.pug
+          include partials/_results.pug
+          include partials/_main.pug
+          include partials/_empty.pug
+        // end::Wrapper
+        include partials/_advanced-options.pug
+        include partials/_preferences.pug
+      // end::Menu
+    // end::Search

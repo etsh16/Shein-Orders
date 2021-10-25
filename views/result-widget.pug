@@ -1,0 +1,15 @@
+.card.card-xxl-stretch
+	.card-body.pt-5
+		each item in data
+			.d-flex.mb-7
+				.symbol.symbol-60px.symbol-2by3.flex-shrink-0.me-4
+					img.mw-100(src=item.goods_img, alt)
+				.d-flex.align-items-center.flex-wrap.flex-grow-1.mt-n2.mt-lg-n1
+					.d-flex.flex-column.flex-grow-1.my-lg-0.my-2.pe-3
+						a.fs-5.text-gray-800.text-hover-primary.fw-bolder(href='javascript:void(0)') #{item.goods_url_name}
+						span.text-gray-400.fw-bold.fs-7.my-1 #{item.goods_name}
+						span.text-gray-400.fw-bold.fs-7
+							a.text-primary.fw-bold(href='//ar.shein.com/'+item.goods_url_name.replaceAll(' ','-')+'-p-'+item.goods_id+'.html',target="_blank") ShopAd
+					.text-end.py-lg-0.py-2
+						span.text-gray-800.fw-boldest.fs-3  #{item.salePrice.amount*4.5} EGP
+						span.text-gray-400.fs-7.fw-bold.d-block  #{item.salePrice.amount} SR

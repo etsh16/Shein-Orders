@@ -1,3 +1,4 @@
+const historyApiFallback = require('connect-history-api-fallback');
 module.exports = {
     proxy: "localhost:8000",
     files: ["**/*.css", "**/*.pug", "**/*.js"],
@@ -6,4 +7,8 @@ module.exports = {
     ui: false,
     notify: false,
     port: 3000,
+    server: {
+      baseDir: ".",
+      middleware: [ historyApiFallback() ]
+    },
   };

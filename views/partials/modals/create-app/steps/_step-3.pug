@@ -1,0 +1,84 @@
+// begin::Step 3
+html
+  head
+  body
+    div(data-kt-stepper-element='content')
+      .w-100
+        // begin::Input group
+        .fv-row.mb-10
+          // begin::Label
+          label.required.fs-5.fw-bold.mb-2 Database Name
+          // end::Label
+          // begin::Input
+          input.form-control.form-control-lg.form-control-solid(type='text', name='dbname', placeholder, value='master_db')
+          // end::Input
+        // end::Input group
+        // begin::Input group
+        .fv-row
+          // begin::Label
+          label.d-flex.align-items-center.fs-5.fw-bold.mb-4
+            span.required Select Database Engine
+            i.fas.fa-exclamation-circle.ms-2.fs-7(data-bs-toggle='tooltip', title='Select your app database engine')
+          // end::Label
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer.mb-5
+            // begin::Label
+            span.d-flex.align-items-center.me-2
+              // begin::Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-success
+                  i.fas.fa-database.text-success.fs-2x
+              // end::Icon
+              // begin::Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 MySQL
+                span.fs-7.text-muted Basic MySQL database
+              // end::Info
+            // end::Label
+            // begin::Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='dbengine', checked, value='1')
+            // end::Input
+          // end::Option
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer.mb-5
+            // begin::Label
+            span.d-flex.align-items-center.me-2
+              // begin::Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-danger
+                  i.fab.fa-google.text-danger.fs-2x
+              // end::Icon
+              // begin::Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 Firebase
+                span.fs-7.text-muted Google based app data management
+              // end::Info
+            // end::Label
+            // begin::Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='dbengine', value='2')
+            // end::Input
+          // end::Option
+          // begin:Option
+          label.d-flex.flex-stack.cursor-pointer
+            // begin::Label
+            span.d-flex.align-items-center.me-2
+              // begin::Icon
+              span.symbol.symbol-50px.me-6
+                span.symbol-label.bg-light-warning
+                  i.fab.fa-amazon.text-warning.fs-2x
+              // end::Icon
+              // begin::Info
+              span.d-flex.flex-column
+                span.fw-bolder.fs-6 DynamoDB
+                span.fs-7.text-muted Amazon Fast NoSQL Database
+              // end::Info
+            // end::Label
+            // begin::Input
+            span.form-check.form-check-custom.form-check-solid
+              input.form-check-input(type='radio', name='dbengine', value='3')
+            // end::Input
+          // end::Option
+        // end::Input group
+    // end::Step 3

@@ -1,0 +1,66 @@
+// begin::Menu 1
+html
+  head
+  body
+    .menu.menu-sub.menu-sub-dropdown.w-250px.w-md-300px#kt_menu_616b4604e8214(data-kt-menu='true')
+      // begin::Header
+      .px-7.py-5
+        .fs-5.text-dark.fw-bolder Filter Options
+      // end::Header
+      // begin::Menu separator
+      .separator.border-gray-200
+      // end::Menu separator
+      // begin::Form
+      .px-7.py-5
+        // begin::Input group
+        .mb-10
+          // begin::Label
+          label.form-label.fw-bold Status:
+          // end::Label
+          // begin::Input
+          div
+            select.form-select.form-select-solid(data-kt-select2='true', data-placeholder='Select option', data-dropdown-parent='#kt_menu_616b4604e8214', data-allow-clear='true')
+              option
+              option(value='1') Approved
+              option(value='2') Pending
+              option(value='2') In Process
+              option(value='2') Rejected
+          // end::Input
+        // end::Input group
+        // begin::Input group
+        .mb-10
+          // begin::Label
+          label.form-label.fw-bold Member Type:
+          // end::Label
+          // begin::Options
+          .d-flex
+            // begin::Options
+            label.form-check.form-check-sm.form-check-custom.form-check-solid.me-5
+              input.form-check-input(type='checkbox', value='1')
+              span.form-check-label Author
+            // end::Options
+            // begin::Options
+            label.form-check.form-check-sm.form-check-custom.form-check-solid
+              input.form-check-input(type='checkbox', value='2', checked)
+              span.form-check-label Customer
+            // end::Options
+          // end::Options
+        // end::Input group
+        // begin::Input group
+        .mb-10
+          // begin::Label
+          label.form-label.fw-bold Notifications:
+          // end::Label
+          // begin::Switch
+          .form-check.form-switch.form-switch-sm.form-check-custom.form-check-solid
+            input.form-check-input(type='checkbox', name='notifications', checked)
+            label.form-check-label Enabled
+          // end::Switch
+        // end::Input group
+        // begin::Actions
+        .d-flex.justify-content-end
+          button.btn.btn-sm.btn-light.btn-active-light-primary.me-2(type='reset', data-kt-menu-dismiss='true') Reset
+          button.btn.btn-sm.btn-primary(type='submit', data-kt-menu-dismiss='true') Apply
+        // end::Actions
+      // end::Form
+    // end::Menu 1
