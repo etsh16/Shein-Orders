@@ -7,8 +7,4 @@ module.exports = {
     ui: false,
     notify: false,
     port: 3000,
-    server: {
-      baseDir: ".",
-      middleware: [ historyApiFallback() ]
-    },
   };
