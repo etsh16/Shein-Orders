@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require("cors");
 const port = process.env.PORT || "8000";
 const v1 = require("./src/routers/v1");
-const request = require('http');
+const request = require('request');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
@@ -22,9 +22,9 @@ app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
 
-
+ 
 app.post("/", (req, res) => {
-  request.httpRequest('http://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
+  request('http://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       let jsonData = JSON.parse(body);
       res.render("result", { data:jsonData, title: "result" });
