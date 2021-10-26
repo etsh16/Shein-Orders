@@ -1,4 +1,4 @@
-.col-xl-3
+.col-xl-3.bg-danger
 	// begin::Statistics Widget 5
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
@@ -7,16 +7,16 @@
 			.text-white.fw-bolder.fs-2.mt-2 Total items
 	// end::Body
 	// end::Statistics Widget 5
-.col-xl-3
+.col-xl-3.bg-danger
 	// begin::Statistics Widget 5
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
 	.card-body.p-2
-			.text-white.fw-bolder.fs-2.mb-2#total-or-price #{data.reduce((a, b) => a + b.salePrice.amount, 0)} 
+			.text-white.fw-bolder.fs-2.mb-2#total-or-price #{data.reduce((a, b) => a +  (b.salePrice.amount*1), 0)} 
 			.text-white.fw-bolder.fs-2.mt-2 Total Price as RS
 	// end::Body
 	// end::Statistics Widget 5
-.col-xl-3
+.col-xl-3.bg-danger
 	// begin::Statistics Widget 5
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
@@ -25,7 +25,7 @@
 			.text-white.fw-bolder.fs-2.mt-2 Total Price as EGP
 	// end::Body
 	// end::Statistics Widget 5  
-.col-xl-3
+.col-xl-3.bg-danger
 	// begin::Statistics Widget 5
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
