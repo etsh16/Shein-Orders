@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
  
 app.post("/", (req, res) => {
-  request('127.0.0.1:57542/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
+  request('shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       let jsonData = JSON.parse(body);
       res.render("result", { data:jsonData,inv:JSON.parse(req.body.inv), title: "result" });
