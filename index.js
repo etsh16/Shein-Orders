@@ -18,6 +18,7 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 app.use("/api", v1);
 
 
+
 app.get("/", (req, res) => {
   res.render("index", { title: "Home" });
 });
