@@ -28,7 +28,8 @@ app.post("/", (req, res) => {
   request('https://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       let jsonData = JSON.parse(body);
-      res.render("result", { data:jsonData,inv:JSON.parse(req.body.inv), title: "result" });
+      let datainv= parseFloat(req.body.inv||0)
+      res.render("result", { data:jsonData,inv:datainv, title: "result" });
     }
   })
 });

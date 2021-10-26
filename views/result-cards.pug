@@ -21,7 +21,7 @@
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
 	.card-body.p-2
-			.text-white.fw-bolder.fs-2.mb-2#total-eg-price #{data.reduce((a, b) => a + (b.salePrice.amount*4.5), 0)} + #{data.length*parseFloat(inv)}
+			.text-white.fw-bolder.fs-2.mb-2#total-eg-price #{data.reduce((a, b) => a + (b.salePrice.amount*4.5), 0)} + #{data.length*inv}
 			.text-white.fw-bolder.fs-2.mt-2 Total Price as EGP
 	// end::Body
 	// end::Statistics Widget 5  
@@ -30,5 +30,5 @@
 	.card.bg-danger.hoverable.mb-5
 	// begin::Body
 	.card-body.p-2
-			.text-white.fw-bolder.fs-2.mb-2#total-over  #{data.reduce((a, b) => a + (b.salePrice.amount*4.5), data.length*parseFloat(inv))}
+			.text-white.fw-bolder.fs-2.mb-2#total-over  #{data.reduce((a, b) => a + (b.salePrice.amount*4.5), data.length*inv)}
 			.text-white.fw-bolder.fs-2.mt-2 Over Total Price  
