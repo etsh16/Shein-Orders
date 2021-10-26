@@ -9,7 +9,8 @@
 						a.fs-5.text-gray-800.text-hover-primary.fw-bolder(href='javascript:void(0)') #{item.goods_url_name}
 						span.text-gray-400.fw-bold.fs-7.my-1 #{item.goods_name}
 						span.text-gray-400.fw-bold.fs-7
-							a.text-primary.fw-bold(href='//ar.shein.com/'+(item.goods_url_name||'').replaceAll(' ','-')+'-p-'+item.goods_id+'.html',target="_blank") ShopAd
+							a.text-primary.fw-bold
+							//- (href='//ar.shein.com/'+(item.goods_url_name||'').replaceAll(' ','-')+'-p-'+item.goods_id+'.html',target="_blank") ShopAd
 					.text-end.py-lg-0.py-2
 						span.text-gray-800.fw-boldest.fs-3  #{item.salePrice.amount*4.5} EGP
 						span.text-gray-400.fs-7.fw-bold.d-block  #{item.salePrice.amount} SR
