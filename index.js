@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const cors = require("cors");
 const port = process.env.PORT || "8000";
 const v1 = require("./src/routers/v1");
-const request = require('request');
+const request = require('http');
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 
 
 app.post("/", (req, res) => {
-  request('http://127.0.0.1:3000/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
+  request.httpRequest('http://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       let jsonData = JSON.parse(body);
       res.render("result", { data:jsonData, title: "result" });
