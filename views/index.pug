@@ -8,16 +8,16 @@ block layout-content
         // begin::Card body
         form.card-body(method='POST' action='/')
           // begin::Compact form
-          .d-flex.align-items-center
+          .row
             // begin::Input group
-            .position-relative.w-20.me-md-2
+            .col-sm-12.col-md-2.col-lg-2.mb-2
               input.form-control.form-control-solid.ps-10.text-center(name='inv',type='text', value='', placeholder='Over Price')#bord-inv  
-            .position-relative.w-100.me-md-2
+            .col-sm-12.col-md-8.col-lg-8.mb-2
               input.form-control.form-control-solid.ps-10.text-center(name='link',type='text', value='', placeholder='Board Link')#bord-link
             // end::Input group
             // begin:Action
-            .d-flex.align-items-center
-              button.btn.btn-primary(type='submit') Search
+            .col-sm-12.col-md-2.col-lg-2.mb-2
+              button.btn.btn-primary(type='submit').col-12 Search
             // end:Action
           // end::Compact form
     //- .g-5.gx-xxl-8
