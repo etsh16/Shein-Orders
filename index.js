@@ -17,6 +17,8 @@ app.use('/js', express.static(path.join(__dirname, 'js')));
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
 app.use("/api", v1);
 
+const sheinController = require('./src/controllers/Shein.Controller');
+
 
 
 app.get("/", (req, res) => {
@@ -24,14 +26,23 @@ app.get("/", (req, res) => {
 });
 
  
-app.post("/", (req, res) => {
-  request('https://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      let jsonData = JSON.parse(body);
-      let datainv= parseFloat(req.body.inv||0)
-      res.render("result", { data:jsonData,inv:datainv, title: "result" });
-    }
-  })
+// app.post("/", (req, res) => {
+//   request('https://shein-orders.herokuapp.com/api/shein?link='+encodeURIComponent(req.body.link), function (error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//       let jsonData = JSON.parse(body);
+//       let datainv= parseFloat(req.body.inv||0)
+//       res.render("result", { data:jsonData,inv:datainv, title: "result" });
+//     }
+//   })
+// });
+app.post("/", async (req, res, next) => {
+  try {
+    var data = await sheinController.getItemsOff(req.body.link);
+    var datainv= parseFloat(req.body.inv||0);
+    res.render("result", { data:data,inv:datainv, title: "result" });
+  } catch (error) {
+    next(error)
+  }
 });
 
 
