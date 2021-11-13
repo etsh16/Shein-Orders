@@ -35,11 +35,14 @@ app.get("/", (req, res) => {
 //     }
 //   })
 // });
+
 app.post("/", async (req, res, next) => {
   try {
     var data = await sheinController.getItemsOff(req.body.link);
     var datainv= parseFloat(req.body.inv||0);
-    res.render("result", { data:data,inv:datainv, title: "result" });
+    var info = data.info;
+    delete data['info'];
+    res.render("result", { data:data,inv:datainv, title: info.groupInfo.groupName,user:info.userInfo.nickname });
   } catch (error) {
     next(error)
   }

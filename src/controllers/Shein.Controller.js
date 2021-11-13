@@ -160,10 +160,12 @@ loaderController.getItemsOff = async (link) => {
         (x) => new Object({ ...x, ...Prices.info.prices[x.goods_sn] })
       );
       result.push(...sss);
+      result['info']=sns.info;
       if (sns.info.goodsListInfo.total<=result.length){
         break;
       }
     }
+    
     return result;
   } catch (err) {
     throw new Error(err)
