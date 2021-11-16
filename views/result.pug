@@ -8,27 +8,20 @@ block layout-content
 		.row.text-center.g-5.gx-xxl-8
 			include result-cards.pug	
 	script.
-		
 		function getpdf(){
-			const { jsPDF } = window.jspdf;
-			 var pdf = new jsPDF('p', 'pt', 'a4');
-			source = $('#kt_content_container')[0];
-			margins = {
-				top: 80,
-				bottom: 60,
-				left: 40,
-				width: 522
-			};
-			pdf.html(
-				source, // HTML string or DOM elem ref.
-				{
-					//- x:margins.left, // x coord
-					//- y:margins.top,   // y coord
-					//- width: margins.width, // max width of content on PDF
-					callback:function (doc) {
-						doc.save(`${$('title').text()}-${new Date().toISOString()}.pdf`);
-					}, 
-				}
-			);
-		}
-		
+			return new Promise(async (resolve, reject) => {
+				let element = document.getElementById('kt_content_container');
+				let opt = {
+					margin: 1,
+					filename: `${$('title').text()}-${new Date().toISOString()}.pdf`,
+					image: {type: 'jpeg', quality: 0.95},
+					html2canvas: {scale: 2, useCORS: true},
+					jsPDF: {unit: 'in', format: 'a4', orientation: 'portrait'}
+				};
+				try {
+					const blob = await window.html2pdf().set(opt).from(element).save();
+					resolve(blob);
+				} catch (e) {
+					reject(e);
+				}});	
+			}
