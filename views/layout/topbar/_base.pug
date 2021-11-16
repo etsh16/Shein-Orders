@@ -7,7 +7,7 @@ html
       .d-flex.align-items-center.ms-1.ms-lg-3
         // begin::Menu- wrapper
         if title != 'Home'
-          .btn.btn-icon.btn-active-light-primary.position-relative.w-30px.h-30px.w-md-40px.h-md-40px
+          .btn.btn-icon.btn-active-light-primary.position-relative.w-30px.h-30px.w-md-40px.h-md-40px(onclick="getpdf()")
             i.bi.bi-file-earmark-pdf-fill.fs-2
         .btn.btn-icon.btn-active-light-primary.position-relative.w-30px.h-30px.w-md-40px.h-md-40px(data-kt-menu-trigger='click', data-kt-menu-attach='parent', data-kt-menu-placement='bottom-end')
           i.bi.bi-grid.fs-2

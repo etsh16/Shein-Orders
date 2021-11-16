@@ -7,3 +7,28 @@ block layout-content
 		br
 		.row.text-center.g-5.gx-xxl-8
 			include result-cards.pug	
+	script.
+		
+		function getpdf(){
+			const { jsPDF } = window.jspdf;
+			 var pdf = new jsPDF('p', 'pt', 'a4');
+			source = $('#kt_content_container')[0];
+			margins = {
+				top: 80,
+				bottom: 60,
+				left: 40,
+				width: 522
+			};
+			pdf.html(
+				source, // HTML string or DOM elem ref.
+				{
+					//- x:margins.left, // x coord
+					//- y:margins.top,   // y coord
+					//- width: margins.width, // max width of content on PDF
+					callback:function (doc) {
+						doc.save(`${$('title').text()}-${new Date().toISOString()}.pdf`);
+					}, 
+				}
+			);
+		}
+		
