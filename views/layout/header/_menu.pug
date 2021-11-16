@@ -4,11 +4,16 @@ html
   body
     .header-menu.align-items-stretch(data-kt-drawer='true', data-kt-drawer-name='header-menu', data-kt-drawer-activate='{default: true, lg: false}', data-kt-drawer-overlay='true', data-kt-drawer-width='{default:\'200px\', \'300px\': \'250px\'}', data-kt-drawer-direction='end', data-kt-drawer-toggle='#kt_header_menu_mobile_toggle', data-kt-swapper='true', data-kt-swapper-mode='prepend', data-kt-swapper-parent='{default: \'#kt_body\', lg: \'#kt_header_nav\'}')
       // begin::Menu
-      .menu.menu-lg-rounded.menu-column.menu-lg-row.menu-state-bg.menu-title-gray-700.menu-state-title-primary.menu-state-icon-primary.menu-state-bullet-primary.menu-arrow-gray-400.fw-bold.my-5.my-lg-0.align-items-stretch#kt_header_menu(data-kt-menu='false')
-        .menu-item.here.show.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
-          a.menu-link.active.py-3(href='/')
-            span.menu-title Home
-            span.menu-arrow.d-lg-none
+      .aside-logo.py-1#kt_aside_logo
+        // begin::Logo
+        a.d-flex.align-items-center(href='/')
+          img.h-60px.logo(alt='Logo', src='assets/media/logos/shein-logo.png')
+        // end::Logo
+      //- .menu.menu-lg-rounded.menu-column.menu-lg-row.menu-state-bg.menu-title-gray-700.menu-state-title-primary.menu-state-icon-primary.menu-state-bullet-primary.menu-arrow-gray-400.fw-bold.my-5.my-lg-0.align-items-stretch#kt_header_menu(data-kt-menu='false')
+      //-   .menu-item.here.show.menu-lg-down-accordion.me-lg-1(data-kt-menu-trigger='click', data-kt-menu-placement='bottom-start')
+      //-     a.menu-link.active.py-3(href='/')
+      //-       span.menu-title Home
+      //-       span.menu-arrow.d-lg-none
         //-   .menu-sub.menu-sub-lg-down-accordion.menu-sub-lg-dropdown.menu-rounded-0.py-lg-4.w-lg-225px
         //-     .menu-item
         //-       a.menu-link.active.py-3(href='?page=index')
